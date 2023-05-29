@@ -3,10 +3,11 @@ import {Component} from "react";
 class Preview extends Component {
     render() {
         return (
-        <div>
+        <div className='preview'>
+            <h2>Personal Information</h2>
             {this.props.personalDetails.map(item => {
                 return (
-                    <div className='personalDetails' key={item.id}>
+                    <div className='preview-group personalDetails' key={item.id}>
                         <h3>{item.name}</h3>
                         <p>{item.position}</p>
                         <p>{item.phone}</p>
@@ -20,7 +21,7 @@ class Preview extends Component {
             <h2>Work Experience</h2>
             {this.props.workExperience.map(item => {
                 return (
-                    <div className="workExperience" key={item.id}>
+                    <div className="preview-group workExperience" key={item.id}>
                         <h3>{item.companyName}</h3>
                         <p>{item.companyPosition}</p>
                         <p>From {item.startDate}</p>
@@ -32,7 +33,7 @@ class Preview extends Component {
             <h2>Education</h2>
             {this.props.education.map(item => {
                 return (
-                    <div className="education" key={item.id}>
+                    <div className="preview-group education" key={item.id}>
                         <h3>{item.courseName}</h3>
                         <p>At: {item.courseProvider}</p>
                         <p>From {item.startDate}</p>
