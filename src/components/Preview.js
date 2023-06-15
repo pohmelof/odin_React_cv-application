@@ -1,11 +1,10 @@
-import {Component} from "react";
+// import {Component} from "react";
 
-class Preview extends Component {
-    render() {
+function Preview(props) {
         return (
         <div className='preview'>
             <h2>Personal Information</h2>
-            {this.props.personalDetails.map(item => {
+            {props.personalDetails.map(item => {
                 return (
                     <div className='preview-group personalDetails' key={item.id}>
                         <h3>{item.name}</h3>
@@ -19,7 +18,7 @@ class Preview extends Component {
                 )
             })}
             <h2>Work Experience</h2>
-            {this.props.workExperience.map(item => {
+            {props.workExperience.map(item => {
                 return (
                     <div className="preview-group workExperience" key={item.id}>
                         <h3>{item.companyName}</h3>
@@ -31,7 +30,7 @@ class Preview extends Component {
                 )
             })}
             <h2>Education</h2>
-            {this.props.education.map(item => {
+            {props.education.map(item => {
                 return (
                     <div className="preview-group education" key={item.id}>
                         <h3>{item.courseName}</h3>
@@ -43,9 +42,7 @@ class Preview extends Component {
                 )
             })}
         </div>
-
         )
-    }
 }
 
 export default Preview
